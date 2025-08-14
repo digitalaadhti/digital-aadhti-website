@@ -1,19 +1,22 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    background: #f4f4f4;
+    background: #f9f9f9;
     color: #333;
 }
 
+/* Header */
 header {
-    background: #0078D4;
+    background: linear-gradient(135deg, #0078D4, #0056A3);
     color: white;
     padding: 1em;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 header h1 {
     margin: 0;
+    font-weight: 600;
 }
 
 nav {
@@ -25,15 +28,31 @@ nav a {
     text-decoration: none;
     margin: 0 10px;
     font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.8;
 }
 
 nav a.active {
-    text-decoration: underline;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 2px;
 }
 
+/* Main */
 main {
     padding: 20px;
     text-align: center;
+}
+
+.intro h2 {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.intro span {
+    color: #0078D4;
 }
 
 .download-options {
@@ -47,49 +66,53 @@ main {
 .download-card {
     background: white;
     padding: 1.5em;
-    border-radius: 10px;
+    border-radius: 12px;
     text-decoration: none;
     color: #333;
     font-size: 1.2em;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 240px;
 }
 
 .download-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.download-section {
+.download-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 0.5em;
+}
+
+/* Download Section */
+.download-section, .coming-soon {
     background: white;
     padding: 2em;
-    border-radius: 10px;
+    border-radius: 12px;
     display: inline-block;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .download-button {
     display: inline-block;
-    background: #28a745;
+    background: linear-gradient(135deg, #28a745, #1e7e34);
     color: white;
     padding: 0.8em 1.5em;
-    border-radius: 5px;
+    border-radius: 6px;
     text-decoration: none;
     font-size: 1.1em;
     margin-top: 1em;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .download-button:hover {
-    background: #218838;
+    background: linear-gradient(135deg, #218838, #16652a);
+    transform: scale(1.05);
 }
 
-.coming-soon {
-    background: white;
-    padding: 2em;
-    border-radius: 10px;
-    display: inline-block;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
+/* Footer */
 footer {
     background: #0078D4;
     color: white;
