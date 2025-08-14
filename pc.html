@@ -10,9 +10,20 @@
         function startDownload() {
             const fileId = "1XRDDZhsCyiVzkjtgB-B3PyWtS_CXYvxH";
             const directLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
+
+            // Show status message
             document.getElementById("status").innerText = "Preparing your download...";
+
+            // Trigger download after short delay
             setTimeout(() => {
-                window.location.href = directLink;
+                const a = document.createElement('a');
+                a.href = directLink;
+                a.target = "_blank"; // Keep current page open
+                a.rel = "noopener noreferrer";
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                document.getElementById("status").innerText = "Your download should start now.";
             }, 1500);
         }
     </script>
