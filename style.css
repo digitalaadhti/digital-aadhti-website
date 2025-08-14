@@ -8,7 +8,7 @@ html, body {
     color: #333;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 .site-header {
     background: linear-gradient(135deg, #004aad, #0078D4);
     color: white;
@@ -50,7 +50,7 @@ nav a.active {
     border-bottom: 2px solid #ffde59;
 }
 
-/* ===== MAIN ===== */
+/* MAIN */
 main {
     flex: 1;
     padding: 30px;
@@ -114,7 +114,7 @@ main {
     transform: translateY(-2px);
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
     background: linear-gradient(135deg, #004aad, #0078D4);
     color: white;
@@ -144,7 +144,7 @@ footer .footer-links a:hover {
     text-decoration: underline;
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .site-header {
         flex-direction: column;
