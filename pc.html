@@ -6,31 +6,13 @@
     <title>Download for PC - Digital Aadhti</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script>
-        function startDownload() {
-            const fileId = "1XRDDZhsCyiVzkjtgB-B3PyWtS_CXYvxH";
-            const directLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
-
-            // Show status message
-            document.getElementById("status").innerText = "Preparing your download...";
-
-            // Trigger download after short delay
-            setTimeout(() => {
-                const a = document.createElement('a');
-                a.href = directLink;
-                a.target = "_blank"; // Keep current page open
-                a.rel = "noopener noreferrer";
-                document.body.appendChild(a);
-                a.click();
-                a.remove();
-                document.getElementById("status").innerText = "Your download should start now.";
-            }, 1500);
-        }
-    </script>
 </head>
 <body>
-    <header>
-        <h1>💻 Digital Aadhti - PC Version</h1>
+    <header class="site-header">
+        <div class="logo-title">
+            <img src="logo.png" alt="Digital Aadhti Logo" class="logo">
+            <h1>Digital Aadhti</h1>
+        </div>
         <nav>
             <a href="index.html">Home</a>
             <a href="pc.html" class="active">PC Version</a>
@@ -42,8 +24,10 @@
         <section class="download-section">
             <h2>Download for Windows</h2>
             <p>Get the full-featured PC version for maximum productivity.</p>
-            <button class="download-button" onclick="startDownload()">⬇ Download Now</button>
-            <p id="status" style="margin-top:10px;color:#555;"></p>
+            <a class="download-button" 
+               href="https://drive.google.com/uc?export=download&id=1XRDDZhsCyiVzkjtgB-B3PyWtS_CXYvxH">
+               ⬇ Download Now
+            </a>
         </section>
     </main>
 
